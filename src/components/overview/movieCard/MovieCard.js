@@ -16,7 +16,7 @@ export const MovieCard = ({title, overview, poster, relDate, votes, movie, chang
                 <img src={poster} className="card-img-top" width="50%" alt={title}/>
                 <div className="card-body d-flex flex-column justify-content-between">
                     <div className="card-body__section mb-4">
-                        <h5 className="card-title">{title}</h5>
+                        <h5 className="card-title text-muted lead">{title}</h5>
                         <p className="card-text">{overview.substr(0, 100)}...</p>
                     </div>
                     <div className="card-body__section d-flex flex-column">
