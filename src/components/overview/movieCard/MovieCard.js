@@ -9,11 +9,11 @@ import PropTypes from 'prop-types';
 // Movie Card component
 ///////////////////////
 
-export const MovieCard = ({title, overview, poster, relDate, votes}) => {
+export const MovieCard = ({title, overview, poster, relDate, votes, movie, changeMovie}) => {
     return (
-        <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div className="card h-100 m-auto">
-                <img src={poster} className="card-img-top" alt={title}/>
+        <div className="col-xl-2 col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div className="card h-100">
+                <img src={poster} className="card-img-top" width="50%" alt={title}/>
                 <div className="card-body d-flex flex-column justify-content-between">
                     <div className="card-body__section mb-4">
                         <h5 className="card-title">{title}</h5>
@@ -31,7 +31,9 @@ export const MovieCard = ({title, overview, poster, relDate, votes}) => {
                             </div>
                         </div>
                         <div className="card-body__section__link">
-                            <a href="#" className="btn btn-primary btn-block">Read more</a>
+                            <button className="btn btn-primary btn-block" data-toggle="modal"
+                                    data-target="#movieDetailModal" onClick={() => changeMovie(movie)}>Read more
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -48,4 +50,6 @@ MovieCard.propTypes = {
     poster: PropTypes.string.isRequired,
     relDate: PropTypes.string.isRequired,
     votes: PropTypes.number.isRequired,
+    movie: PropTypes.object.isRequired,
+    changeMovie: PropTypes.func.isRequired,
 };

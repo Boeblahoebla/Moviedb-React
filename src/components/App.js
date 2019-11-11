@@ -9,6 +9,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Navbar } from './navbar/Navbar';
 import { Overview } from './overview/Overview';
 
+// Styling
+import '../assets/css/App.css';
+
 
 // App component
 ////////////////
