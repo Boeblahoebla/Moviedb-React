@@ -51,7 +51,7 @@ export const Pagination = ({ pages, currentPage, decrementPage, incrementPage, s
 
 // Prop types for the component
 Pagination.propTypes = {
-    pages: PropTypes.number.isRequired,
+    pages: PropTypes.number,
     currentPage: PropTypes.number.isRequired,
     setPageEnd: PropTypes.func.isRequired,
     setPageBegin: PropTypes.func.isRequired,

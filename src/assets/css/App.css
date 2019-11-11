@@ -9,6 +9,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-.page-control:hover {
+.page-control:hover, .nav-item:hover {
     cursor: pointer;
 }

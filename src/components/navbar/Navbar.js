@@ -10,7 +10,7 @@ import React from 'react';
 export const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">Like movies</a>
+            <div className="navbar-brand">Like movies</div>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation"
@@ -20,13 +20,13 @@ export const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Overview <span className="sr-only">(current)</span></a>
+                        <div className="nav-link">Overview <span className="sr-only">(current)</span></div>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Features</a>
+                        <div className="nav-link">Features</div>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">About</a>
+                        <div className="nav-link">About</div>
                     </li>
                 </ul>
             </div>

@@ -32,17 +32,14 @@ export const Overview = () => {
     useEffect(() => {
         axios.get(`${baseUrlOverview}&api_key=${ApiKey}&page=${currentPage}`)
             .then(res => {
-                console.log(res.data);
                 setMoviesLoading(false);
                 setMovies(res.data.results);
                 setPages(res.data.total_pages)
             })
-    },[ currentPage ]);
+    },[ currentPage, ApiKey, baseUrlOverview ]);
 
     // Handler to change the movie in the modal
-    const changeMovie = (movie) => {
-        setMovie(movie);
-    };
+    const changeMovie = (movie) => { setMovie(movie) };
 
     // Decrement page handler
     const decrementPage = () => { currentPage > 1 && setCurrentPage(currentPage - 1) };
@@ -75,6 +72,7 @@ export const Overview = () => {
         <div>
             <Pagination pages={pages} currentPage={currentPage} decrementPage={decrementPage} incrementPage={incrementPage}
                         setPageEnd={setPageEnd} setPageBegin={setPageBegin} selectPage={selectPage}/>
+
             <div className="row">
                 {moviesContent}
                 <MovieDetailModal movie={movie}/>

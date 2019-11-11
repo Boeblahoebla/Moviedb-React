@@ -15,11 +15,8 @@ export const PageNumberItem = ({pageNumber, active, selectPage}) => {
 
     // Format the page number correctly
     let pageNumberText;
-    if(pageNumber < 10) {
-        pageNumberText = `0${pageNumber.toString()}`
-    } else {
-        pageNumberText = pageNumber.toString()
-    }
+    if(pageNumber < 10) { pageNumberText = `0${pageNumber.toString()}` }
+    else { pageNumberText = pageNumber.toString() }
 
     // Choose the right  listItem to return
     if(active) {
