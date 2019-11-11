@@ -112,7 +112,6 @@ export const PageNumbers = ({pages, currentPage, selectPage}) => {
         <div className="d-flex justify-content-center">
             <nav aria-label="Page navigation">
                 {numbersLayout}
-
             </nav>
         </div>
     )

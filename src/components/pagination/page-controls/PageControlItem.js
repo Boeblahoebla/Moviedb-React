@@ -14,39 +14,20 @@ export const PageControlItem = ({icon, action}) => {
     // Generate the right icon & attach the action on Click
     let control = '';
 
-    if(icon === 'begin') {
-        control =  (
+    const generatePageItem = (icon, label) => {
+        return (
             <li className="page-item page-control" onClick={action}>
-                <div className="page-link" aria-label="begin">
-                    <i className="fas fa-fast-backward text-secondary"/>
-                </div>
-            </li>
-        );
-    } else if(icon === 'previous') {
-        control = (
-            <li className="page-item page-control" onClick={action}>
-                <div className="page-link" aria-label="previous">
-                    <i className="fas fa-backward text-secondary"/>
+                <div className="page-link" aria-label={label}>
+                    <i className={`fas fa-${icon} text-secondary`}/>
                 </div>
             </li>
         )
-    } else if(icon === 'next') {
-        control= (
-            <li className="page-item page-control" onClick={action}>
-                <div className="page-link" aria-label="next">
-                    <i className="fas fa-forward text-secondary"/>
-                </div>
-            </li>
-        )
-    } else {
-        control = (
-            <li className="page-item page-control" onClick={action}>
-                <div className="page-link" aria-label="end">
-                    <i className="fas fa-fast-forward text-secondary"/>
-                </div>
-            </li>
-        )
-    }
+    };
+
+    if(icon === 'begin') { control =  generatePageItem("fast-backward", "begin") }
+    else if(icon === 'previous') { control = generatePageItem("backward", "previous") }
+    else if(icon === 'next') { control = generatePageItem("forward", "next") }
+    else { control = generatePageItem("fast-forward", "end") }
 
     return (
         <div>
