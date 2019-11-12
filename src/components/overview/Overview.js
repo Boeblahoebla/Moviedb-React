@@ -32,6 +32,7 @@ export const Overview = () => {
     useEffect(() => {
         axios.get(`${baseUrlOverview}&api_key=${ApiKey}&page=${currentPage}`)
             .then(res => {
+                console.log(res.data.results);
                 setMoviesLoading(false);
                 setMovies(res.data.results);
                 setPages(res.data.total_pages)
