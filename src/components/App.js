@@ -3,11 +3,11 @@
 
 // Base dependencies
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 // Components
-import { Navbar } from './navbar/Navbar';
-import { Overview } from './overview/Overview';
+import {Navbar} from './navbar/Navbar';
+import {Overview} from './overview/Overview';
 
 // Styling
 import '../assets/css/App.css';
@@ -19,14 +19,14 @@ import '../assets/css/App.css';
 function App() {
     return (
         <div className="App">
-            <Navbar />
-            <div className="container-fluid mt-4 mb-4">
-                <Router>
+            <Router>
+                <Navbar/>
+                <div className="container-fluid mt-4 mb-4">
                     <Switch>
-                        <Route exact path="/" component={ Overview }/>
+                        <Route exact path="/" component={Overview}/>
                     </Switch>
-                </Router>
-            </div>
+                </div>
+            </Router>
         </div>
     );
 }
